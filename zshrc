@@ -1,7 +1,7 @@
 alias gccc="gcc -Wall -Wextra -Werror"
 alias rmd="rm -rf"
 alias rc="vim ~/.zshrc && source ~/.zshrc"
-alias work="cd ~/Desktop/pj"
+alias work="cd ~/Desktop/"
 alias vsc="open . -a 'Visual studio code'"
 alias cppch="cppcheck --enable=all *.c"
 alias cmt="git commit -m"
@@ -12,15 +12,20 @@ function comp() {
 	./$1
 }
 
+function move_clang() {
+	mkdir ~/.school_resources_for_peer
+	cp ../materials/linters/.clang-format ~/.school_resources_for_peer/.clang-format
+}
+
 function weak() {
 	leaks -atExit -- ./$1
 }
 
 function clangch() {
-        cp ../materials/linters/.clang-format .clang-format
-        clang-format -i *.c
-        clang-format -n *.c
-        rm .clang-format
+	cp ~/.school_resources_for_peer/.clang-format .clang-format
+	clang-format -i *.c
+	clang-format -n *.c
+	rm .clang-format
 }
 
 function review() {
