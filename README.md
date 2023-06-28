@@ -28,7 +28,8 @@
 
 ## clangch in terminal (from any folder contains .c files)
 ### it moves clang-format from ~/.school_resources_for_peer to current directory, checks file and remove clang-format
-### (before first use you must write in terminal ***move_clang*** from any src folder). It creates ~/.school_res... bla bla bla with .clang-format
+### (before first use you must write in terminal ***move_clang*** from any src folder). 
+### (It creates ~/.school_res... bla bla bla with .clang-format)
 
 ## cmt
 ### stands for 'git commit -m'
