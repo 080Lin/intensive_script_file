@@ -2,14 +2,14 @@
 
 ### Pass the script into ~/.zshrc file or just move it there
 
-## comp file.c ex comp sort
-### ex we have sort.c
+## comp
+### ***example*** we have sort.c
 ### we write comp sort
 ### it compiles sort.c and creates executable sort.cmyo file
 ### makes file executable to macos and run it immediately if no compilation error
 
-## weak file.c ex weak sort
-### ex we have sort.cmyo
+## weak
+### ***example*** we have sort.cmyo
 ### it runs it and tests for any leaks
 ### works only in pair with ***comp*** or file.cmyo files
 ### checks for leaks
