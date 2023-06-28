@@ -16,6 +16,13 @@ function weak() {
 	leaks -atExit -- ./$1
 }
 
+function clangch() {
+        cp ../materials/linters/.clang-format .clang-format
+        clang-format -i *.c
+        clang-format -n *.c
+        rm .clang-format
+}
+
 function review() {
 	rm -rf *
 	git clone -b develop $1
