@@ -6,10 +6,11 @@ alias vsc="open . -a 'Visual studio code'"
 alias cppch="cppcheck --enable=all *.c"
 alias cmt="git commit -m"
 alias push="git push origin develop"
+alias rmcmyo="rm *.cmyo"
 
 function comp() {
-	gcc -Wall -Wextra -Werror "$1.c" -o $1
-	./$1
+	gcc -Wall -Wextra -Werror "$1.c" -o "$1.cmyo"
+	./"$1.cmyo"
 }
 
 function move_clang() {
@@ -18,7 +19,7 @@ function move_clang() {
 }
 
 function weak() {
-	leaks -atExit -- ./$1
+	leaks -atExit -- ./"$1.cmyo"
 }
 
 function clangch() {
