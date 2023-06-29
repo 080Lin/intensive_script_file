@@ -46,6 +46,7 @@ rm -rf ~/Library/Application\ Support/Slack/Cache/
 rm -rf ~/Library/Application\ Support/Slack/Service\ Worker/CacheStorage/
 rm -rf ~/Library/Caches/*
 rm -rf ~/.Trash/*
+rm -rf ~/Library/Developer/*
 rm -rf ~/Library/Safari/*
 rm -rf ~/.kube/cache/*
 rm -rf ~/Library/Application\ Support/Code/CachedData/*
