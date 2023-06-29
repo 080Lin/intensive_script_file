@@ -1,6 +1,7 @@
 # intensive_script_file
 
-### Pass the script into ~/.zshrc file or just move it there
+### Pass the script into ~/.zshrc file or just move it there. After placing script into the correct place
+### write in terminal **source ~/.zshrc** to make it work
 
 ## comp
 ### ***example*** we have sort.c
