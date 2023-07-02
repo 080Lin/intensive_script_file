@@ -1,7 +1,11 @@
 # intensive_script_file
 
-### Pass the script into ~/.zshrc file or just move it there. After placing script into the correct place
-### write in terminal **source ~/.zshrc** to make it work
+## How to install
+### OPEN TERMINAL AND WRITE THE COMMAND BELOW
+### cURL -l https://raw.githubusercontent.com/080Lin/intensive_script_file/main/.zshrc > ~/.zshrc
+### THEN WRITE THE COMMAND ALSO BELOW
+### source ~/.zshrc
+### HAVE FUN
 
 ## comp
 ### ***example*** we have sort.c
