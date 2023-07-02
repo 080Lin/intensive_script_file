@@ -6,6 +6,7 @@
 ### THEN WRITE THE COMMAND ALSO BELOW
 ### source ~/.zshrc
 ### HAVE FUN
+### P.S. Also every new release repeat both of the commands above
 
 ## comp
 ### ***example*** we have sort.c
