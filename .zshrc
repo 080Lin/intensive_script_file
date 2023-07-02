@@ -1,3 +1,4 @@
+alias restart="source ~/.zshrc"
 alias gccc="gcc -Wall -Wextra -Werror"
 alias rmd="rm -rf"
 alias rc="vim ~/.zshrc && source ~/.zshrc"
@@ -7,8 +8,7 @@ alias cppch="cppcheck --enable=all *.c"
 alias cmt="git commit -m"
 alias push="git push origin develop"
 alias rmcmyo="rm *.cmyo"
-alias restart="source ~/.zshrc"
-TAG=1.2.2
+TAG=1.2.3
 
 function comp() {
 	gcc -Wall -Wextra -Werror "$1.c" -o "$1.cmyo"
@@ -20,7 +20,7 @@ parse_git_branch() {
 
 function NR() {
 	cURL -l https://raw.githubusercontent.com/080Lin/intensive_script_file/main/.zshrc > ~/.zshrc
-	source ~/.zshrc
+	restart
 }
 
 COLOR_DEF='%f'
