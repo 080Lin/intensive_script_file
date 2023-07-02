@@ -16,6 +16,11 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
 }
 
+function NR() {
+	cURL -l https://raw.githubusercontent.com/080Lin/intensive_script_file/main/.zshrc > ~/.zshrc
+	source ~/.zshrc
+}
+
 COLOR_DEF='%f'
 COLOR_DIR='%F{197}'
 COLOR_GIT='%F{39}'
