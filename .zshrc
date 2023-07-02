@@ -7,6 +7,7 @@ alias cppch="cppcheck --enable=all *.c"
 alias cmt="git commit -m"
 alias push="git push origin develop"
 alias rmcmyo="rm *.cmyo"
+alias restart="source ~/.zshrc"
 TAG=1.2.2
 
 function comp() {
