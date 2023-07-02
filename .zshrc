@@ -12,6 +12,16 @@ function comp() {
 	gcc -Wall -Wextra -Werror "$1.c" -o "$1.cmyo"
 	./"$1.cmyo"
 }
+parse_git_branch() {
+    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
+}
+
+COLOR_DEF='%f'
+COLOR_DIR='%F{197}'
+COLOR_GIT='%F{39}'
+NEWLINE=$'\n'
+setopt PROMPT_SUBST
+export PROMPT='${COLOR_DIR}%d ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF}${NEWLINE}%% '
 
 function move_clang() {
 	mkdir ~/.school_resources_for_peer
@@ -35,26 +45,5 @@ function review() {
 }
 
 function kc() {
-echo '----------------------'
-echo '\033[37;1;41mSize    Used    Avail\033[0m'
-echo '----------------------'
-df -h | grep Users | awk '{print $2 " = " $3 " + "  $4}'
-#df -h | awk 'NR == 8{print $2 " = " $3 " + "  $4}'
-#df -h | created/by/mmargene\Support/Peer/sh
-rm -rf ~/Library/Application\ Support/Slack/Code\ Cache/
-rm -rf ~/Library/Application\ Support/Slack/Cache/
-rm -rf ~/Library/Application\ Support/Slack/Service\ Worker/CacheStorage/
-rm -rf ~/Library/Caches/*
-rm -rf ~/.Trash/*
-rm -rf ~/Library/Developer/*
-rm -rf ~/Library/Safari/*
-rm -rf ~/.kube/cache/*
-rm -rf ~/Library/Application\ Support/Code/CachedData/*
-rm -rf ~/Library/Application\ Support/Code/User/workspaceStoratge
-rm -fr ~/Library/Containers/com.docker.docker/Data/vms/*
-rm -fr ~/Library/Containers/com.apple.Safari/Data/Library/Caches/*
-rm -rf ~/Library/Application\ Support/Firefox/Profiles/hdsrd79k.default-release/storage
-df -h | grep Users | awk '{print $2 " = " $3 " + "  $4}'y
-#df -h | awk 'NR == 8{print $2 " = " $3 " + "  $4}'
-echo '----------------------'% 
+curl -s https://saveski.ru/XcleanX.sh | bash
 }
