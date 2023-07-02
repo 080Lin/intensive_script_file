@@ -7,6 +7,7 @@ alias cppch="cppcheck --enable=all *.c"
 alias cmt="git commit -m"
 alias push="git push origin develop"
 alias rmcmyo="rm *.cmyo"
+TAG=1.2.1
 
 function comp() {
 	gcc -Wall -Wextra -Werror "$1.c" -o "$1.cmyo"
