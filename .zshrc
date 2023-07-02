@@ -18,8 +18,7 @@ parse_git_branch() {
 }
 
 function NR() {
-	cURL -l https://raw.githubusercontent.com/080Lin/intensive_script_file/main/.zshrc > ~/.zshrc
-	source ~/.zshrc
+	cURL -l https://raw.githubusercontent.com/080Lin/intensive_script_file/main/.zshrc > ~/.zshrc && source ~/.zshrc
 }
 
 COLOR_DEF='%f'
