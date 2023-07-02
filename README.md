@@ -6,7 +6,8 @@
 ### THEN WRITE THE COMMAND ALSO BELOW
 ### source ~/.zshrc
 ### HAVE FUN
-### P.S. Also every new release repeat both of the commands above
+### P.S. Also every new release can be installed with the command below
+### NR 
 
 ## comp
 ### ***example*** we have sort.c
