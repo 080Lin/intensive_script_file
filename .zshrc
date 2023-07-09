@@ -7,16 +7,17 @@ alias vsc="open . -a 'Visual studio code'"
 alias cppch="cppcheck --enable=all --suppress=missingIncludeSystem *.c *.h"
 alias cmt="git commit -m"
 alias push="git push origin develop"
-alias rmcmyo="rm *.cmyo"
+alias weak="leaks -atExit --"
 TAG=1.3.1
 
 function comp() {
-	gcc -Wall -Wextra -Werror "$1.c" -o "$1.cmyo"
-	./"$1.cmyo"
+	gcc -Wall -Wextra -Werror "$1.c" -o "$1.o"
+	./"$1.o"
 }
 parse_git_branch() {
     git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
 }
+
 
 function NR() {
 	cURL -l https://raw.githubusercontent.com/080Lin/intensive_script_file/main/.zshrc > ~/.zshrc
@@ -38,10 +39,6 @@ function init_setup() {
 	cURL -l https://raw.githubusercontent.com/080Lin/intensive_script_file/main/.clang-format > ~/.school_resources_for_peer/.clang-format
 }
 
-function weak() {
-	leaks -atExit -- ./"$1.cmyo"
-}
-
 function clangch() {
 	cp ~/.school_resources_for_peer/.clang-format .clang-format
 	clang-format -i *.c *.h
@@ -50,7 +47,13 @@ function clangch() {
 }
 
 function review() {
-	rm -rf *
+	if [ ! -d "~/Desktop/peer_review_dir" ]; then
+		mkdir ~/Desktop/peer_review_dir
+	fi
+	cd ~/Desktop/peer_review_dir
+	if (( $2 == 1 )); then
+		rm -rf *
+	fi
 	git clone -b develop $1
 }
 
