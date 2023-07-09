@@ -10,26 +10,26 @@ alias push="git push origin develop"
 alias weak="leaks -atExit --"
 TAG=1.3.1
 
-function comp() {
-	gcc -Wall -Wextra -Werror "$1.c" -o "$1.o"
-	./"$1.o"
-}
-parse_git_branch() {
-    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
-}
-
-
-function NR() {
-	cURL -l https://raw.githubusercontent.com/080Lin/intensive_script_file/main/.zshrc > ~/.zshrc
-	restart
-}
-
 COLOR_DEF='%f'
 COLOR_DIR='%F{197}'
 COLOR_GIT='%F{39}'
 NEWLINE=$'\n'
 setopt PROMPT_SUBST
 export PROMPT='${COLOR_DIR}%d ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF}${NEWLINE}%% '
+
+parse_git_branch() {
+    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
+}
+
+function comp() {
+	gcc -Wall -Wextra -Werror "$1.c" -o "$1.o"
+	./"$1.o"
+}
+
+function NR() {
+	cURL -l https://raw.githubusercontent.com/080Lin/intensive_script_file/main/.zshrc > ~/.zshrc
+	restart
+}
 
 function init_setup() {
 	if [ ! -d "~/.school_resources_for_peer" ]
